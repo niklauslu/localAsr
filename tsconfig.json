@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                  // 指定ECMAScript目标版本
+    "module": "commonjs",             // 指定模块代码生成方式
+    "declaration": true,              // 生成相应的'.d.ts'文件
+    "outDir": "./dist",                // 指定输出目录
+    "lib": ["ESNext", "DOM"],
+    "strict": true,                   // 启用所有严格类型检查选项
+    "esModuleInterop": true,          // 允许默认导入非ES模块
+    "skipLibCheck": true,             // 跳过声明文件的类型检查
+    "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致引用
+    "moduleResolution": "node",       // 选择模块解析策略
+    "resolveJsonModule": true,        // 允许导入JSON模块
+    "isolatedModules": true,          // 每个文件进行转换，适用于Babel或ts-loader
+    "noImplicitReturns": true,        // 不允许函数缺少返回值
+    "noFallthroughCasesInSwitch": true // 防止switch语句贯穿
+
+  },
+  "include": [
+    "src/**/*"                        // 指定要包含在编译中的文件夹
+  ],
+  "exclude": [
+    "node_modules",                   // 排除不需要编译的文件夹
+    "examples",
+    "tests",
+    "**/*.test.ts",                   // 排除测试文件
+    "dist"                             // 排除编译输出目录
+  ]
+}
